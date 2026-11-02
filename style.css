@@ -1,0 +1,174 @@
+ * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 25px;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px #00000010;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2563eb;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    .delete-btn {
+      background: #dc2626;
+    }
+
+    .sell-btn {
+      background: #f59e0b;
+      color: #111;
+    }
+
+    .plus-btn {
+      background: #16a34a;
+    }
+
+    .reset-btn {
+      background: #555;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .product-info {
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    .out-of-stock {
+      color: red;
+      font-weight: bold;
+    }
+
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .product-actions button {
+      padding: 7px 10px;
+    }
+
+    .summary {
+      background: #eff6ff;
+      padding: 15px;
+      border-radius: 8px;
+      line-height: 2;
+      margin-top: 20px;
+    }
+
+    #status {
+      font-weight: bold;
+    }
+
+    .filter-category {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    form {
+      max-width: 500px;
+    }
+
+    #error {
+      color: red;
+      white-space: pre-line;
+      margin-bottom: 12px;
+    }
+
+    #success {
+      color: green;
+      margin-bottom: 12px;
+    }
+
+    #most-expensive {
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      .product {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }

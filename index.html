@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="container">
+    <h1>Shop Stock Board</h1>
+
+    <h2>Product Filters</h2>
+
+    <div class="buttons">
+      <button onclick="setFilter('all')">All</button>
+      <button onclick="setFilter('stock')">In Stock</button>
+      <button onclick="setFilter('cheap')">Cheap</button>
+      <button onclick="setFilter('expensive')">Expensive</button>
+      <button onclick="sortProducts()">Sort by Price</button>
+      <button onclick="discountProducts()">Discount 10%</button>
+      <button class="reset-btn" onclick="resetProducts()">Reset</button>
+    </div>
+
+    <div class="filter-category">
+      <label for="categoryFilter">Filter by Category</label>
+      <select id="categoryFilter" onchange="changeCategory()">
+        <option value="all">All categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothes">Clothes</option>
+        <option value="food">Food</option>
+      </select>
+    </div>
+
+    <h2>Products</h2>
+
+    <div id="productList"></div>
+
+    <div class="summary">
+      <div>Products shown: <strong id="count">0</strong></div>
+      <div>Total stock value: <strong id="totalValue">0</strong> EGP</div>
+      <div>Status: <span id="status"></span></div>
+      <div>Most expensive product: <span id="most-expensive"></span></div>
+    </div>
+
+    <h2>Add Product</h2>
+
+    <form id="productForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Product name">
+
+      <label for="category">Category</label>
+      <select class="Category" id="category">
+        <option value="">-- Choose category --</option>
+        <option value="electronics">electronics</option>
+        <option value="clothes">clothes</option>
+        <option value="food">food</option>
+      </select>
+
+      <label for="price">Price (EGP)</label>
+      <input type="number" id="price" placeholder="Enter price" step="any">
+
+      <label for="stock">Stock</label>
+      <input type="number" id="stock" placeholder="0 - 1000" step="1">
+
+      <div id="error"></div>
+      <div id="success"></div>
+
+      <button type="submit">Add Product</button>
+    </form>
+  </div>
+
+
+  <script src="./apps.js"></script>
+  <script src="./app.js"></script>
+  </body>
+</html>
